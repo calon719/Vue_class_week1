@@ -76,8 +76,8 @@
                 </div>
               </div>
             </div>
-            <template>
-              <img src="" alt="" class="images m-2">
+            <template v-for="(item, index) in selectedProduct.imagesUrl" :key="index">
+              <img :src="item" :alt="`${selectedProduct.title+(index+1)}`" class="images m-2">
             </template>
           </template>
           <p class="text-secondary" v-else>請選擇一個商品查看</p>
